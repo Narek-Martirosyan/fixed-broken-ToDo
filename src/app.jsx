@@ -39,14 +39,14 @@ const todosTemplate = [
 ];
 
 export const App = () => {
-  const [todos, setTodos] = React.useState([]);
+  const [todos, setTodos] = React.useState(todosTemplate);
 
   return (
     <div className="root">
       <TodosContext.Provider value={{ todos }}>
-        <TodoList />
+        <TodoList setTodos={setTodos} />
         <TodoResults />
-        <TodoForm />
+        <TodoForm setTodos={setTodos} />
       </TodosContext.Provider>
     </div>
   );
