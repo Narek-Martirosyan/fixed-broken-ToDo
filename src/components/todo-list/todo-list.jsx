@@ -3,11 +3,10 @@ import { Checkbox } from '../checkbox';
 import { TodosContext } from '../../todo-context';
 import './todo-list.scss';
 
-export const TodoList = ({ setTodos }) => {
-  const { todos } = React.useContext(TodosContext);
+export const TodoList = () => {
+  const { todos, setTodos } = React.useContext(TodosContext);
 
   const handleDelete = (id) => {
-    // Fix an ability to delete task
     todos.forEach((todo, index) => {
       if (todo.id === id) {
         todos.splice(index, 1);

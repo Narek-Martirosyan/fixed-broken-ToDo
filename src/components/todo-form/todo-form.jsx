@@ -2,8 +2,8 @@ import * as React from 'react';
 import { TodosContext } from '../../todo-context';
 import './todo-form.scss';
 
-export const TodoForm = ({ setTodos }) => {
-  const { todos } = React.useContext(TodosContext);
+export const TodoForm = () => {
+  const { todos, setTodos } = React.useContext(TodosContext);
   const [task, setTask] = React.useState('');
 
   const handleSubmit = (e, value) => {
